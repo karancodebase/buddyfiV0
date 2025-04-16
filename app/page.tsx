@@ -66,7 +66,7 @@ export default function LandingPage() {
           <input
             type="hidden"
             name="_redirect"
-            value="http://localhost:3000/thanks"
+            value="https://buddyfi.jaydatt.xyz/thanks"
           />
 
           <button

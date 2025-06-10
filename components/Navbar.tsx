@@ -16,10 +16,10 @@ export default function Navbar() {
           Early Access
         </Link>
         <Link
-          href="#"
+          href="https://app.buddyfi.xyz/"
           className="px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-medium transition"
         >
-          Launching Soon 🚀
+          Get Started
         </Link>
       </nav>
     </header>

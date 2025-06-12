@@ -1,11 +1,14 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
   const heroRef = useRef(null);
   const formRef = useRef(null);
+  const router = useRouter();
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     gsap.fromTo(
@@ -20,6 +23,17 @@ export default function LandingPage() {
     );
   }, []);
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (isValidEmail) {
+      router.push("/thanks");
+    } else {
+      alert("Enter a valid email.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       <section
@@ -33,12 +47,11 @@ export default function LandingPage() {
           Where devs don&apos;t just vibe — they match. Find your hackathon
           dream team, buddy up with builders, and launch cool stuff together.
         </p>
-      
       </section>
 
       <section
         ref={formRef}
-        className="bg-neutral-900 px-6 py-20 flex flex-col items-center text-center"
+        className="bg-neutral-950 px-6 py-20 flex flex-col items-center text-center"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Be the First to Join the Hacker Network
@@ -48,25 +61,15 @@ export default function LandingPage() {
           to match and vibe pre-hackathons. <br />
           Want in early? Drop your email and let&apos;s go.
         </p>
-        
-        <form
-          action="https://submit-form.com/nmLrmTwrP"
-          method="POST"
-          className="flex flex-col gap-4 mt-4"
-        >
+
+        <form className="flex flex-col gap-4 mt-4" onSubmit={handleSubmit}>
           <input
             type="email"
-            name="email"
             required
             placeholder="your@devmail.xyz"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="px-4 py-3 rounded bg-zinc-800 text-white border border-zinc-600"
-          />
-
-          {/* <!-- Hidden redirect field --> */}
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://buddyfi.jaydatt.xyz/thanks"
           />
 
           <button

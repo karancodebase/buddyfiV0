@@ -1,14 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
   const heroRef = useRef(null);
   const formRef = useRef(null);
-  const router = useRouter();
-  const [email, setEmail] = useState("");
 
   useEffect(() => {
     gsap.fromTo(
@@ -23,17 +20,6 @@ export default function LandingPage() {
     );
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (isValidEmail) {
-      router.push("/thanks");
-    } else {
-      alert("Enter a valid email.");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       <section
@@ -41,57 +27,48 @@ export default function LandingPage() {
         className="flex flex-col items-center justify-center text-center px-6 py-24"
       >
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-purple-500 text-transparent bg-clip-text">
-          Built to Match the Dopest Builders
+          🚧 BuddyFi is Updating!
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-xl">
-          Where devs don&apos;t just vibe — they match. Find your hackathon
-          dream team, buddy up with builders, and launch cool stuff together.
+          We&apos;re currently shipping some exciting updates to make your
+          experience even better. In the meantime, you can visit the main app
+          here:
         </p>
-      </section>
-
-      <section
-        ref={formRef}
-        className="bg-neutral-950 px-6 py-20 flex flex-col items-center text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Be the First to Join the Hacker Network
-        </h2>
-        <p className="mt-4 text-gray-400 max-w-lg">
-          We&apos;re bringing together the dopest devs, builders, and code-heads
-          to match and vibe pre-hackathons. <br />
-          Want in early? Drop your email and let&apos;s go.
-        </p>
-
-        <form className="flex flex-col gap-4 mt-4" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            required
-            placeholder="your@devmail.xyz"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="px-4 py-3 rounded bg-zinc-800 text-white border border-zinc-600"
-          />
-
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-400 transition-all px-4 py-2 rounded"
-          >
-            Count Me In
-          </button>
-        </form>
-
-        <div className="mt-6 text-xs text-gray-600 font-mono">
-          <p> booting buddyfi.exe ...</p>
-          <p> matching legendary builders</p>
-          <p> vibe levels: 1337</p>
-        </div>
-      </section>
-
-      <footer className="text-center py-10 text-gray-500 text-sm flex justify-center items-center md:flex-row flex-col">
-        © 2025 BuddyFi. Stay weird, stay building. ·{" "}
-        <Link href="https://x.com/buddyfii" className="underline font-bold">
-          Twitter/X
+        <Link
+          href="https://app.buddyfi.xyz"
+          className="px-4 mt-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-medium transition"
+        >
+          Go to BuddyFi
         </Link>
+        <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-xl">
+          Thanks for your patience! 💙
+        </p>
+      </section>
+
+      <footer className="w-full py-8 px-4 text-center text-sm text-gray-500 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 border-t border-gray-800">
+        <span>
+          © 2025 <span className="font-semibold text-white">BuddyFi</span>. Stay
+          weird. Stay building.
+        </span>
+        <div className="flex gap-4">
+          <Link
+            href="https://x.com/buddyfii"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline hover:text-blue-400 transition"
+          >
+            Twitter/X
+          </Link>
+          <span className="text-gray-400">·</span>
+          <Link
+            href="https://www.linkedin.com/company/buddyfii"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline hover:text-blue-400 transition"
+          >
+            LinkedIn
+          </Link>
+        </div>
       </footer>
     </div>
   );

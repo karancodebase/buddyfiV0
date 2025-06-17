@@ -2,7 +2,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Intro from "@/components/Intro";
-import Footer from "@/components/Footer";
+
+import Problem from "@/components/Problem";
+import Rewrites from "@/components/Rewrites";
 
 export default function LandingPage() {
   const heroRef = useRef(null);
@@ -22,10 +24,10 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div>
-      <Intro/>
-
-      <Footer/>
+    <div className="mb-10">
+      <Intro />
+      <Problem />
+      <Rewrites />
     </div>
   );
 }

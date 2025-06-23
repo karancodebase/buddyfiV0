@@ -5,6 +5,9 @@ import Intro from "@/components/Intro";
 
 import Problem from "@/components/Problem";
 import Rewrites from "@/components/Rewrites";
+import Working from "@/components/Working";
+import Stages from "@/components/Stages";
+import Testimonials from "@/components/Testimonials";
 
 export default function LandingPage() {
   const heroRef = useRef(null);
@@ -24,10 +27,13 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="mb-10">
+    <div className="pb-10 bg-black">
       <Intro />
       <Problem />
       <Rewrites />
+      <Working/>
+      <Stages/>
+      <Testimonials/>
     </div>
   );
 }

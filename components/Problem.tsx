@@ -14,7 +14,7 @@ const Problem = () => {
         <span className="text-orange-400">team formation chaos</span>.
       </p>
       <div className="flex justify-center">
-        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-4 md:px-6 px-2 mt-10">
+        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-6 md:px-6 px-2 mt-10">
           <p className="text-neutral-400 md:text-lg text-sm">
             &quot;We watched brilliant ideas die because great developers
             couldn&apos;t find each other. The random team formation process was
@@ -23,8 +23,15 @@ const Problem = () => {
           <p className="text-cyan-400 md:text-xl mt-4">- BuddyFi Founders</p>
         </div>
       </div>
+
+      <div className="flex justify-center px-10 gap-6 py-10">
+        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
+        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
+        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
+        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
+      </div>
       <div className="flex justify-center">
-        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-4 md:px-6 px-2 mt-10">
+        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-8 md:px-10 px-2 mt-10">
           <p className="text-neutral-50 md:text-2xl text-xl mb-4 font-semibold">
             The Breaking Point
           </p>

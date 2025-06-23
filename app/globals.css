@@ -117,6 +117,17 @@
   border: 1px solid rgba(134, 134, 134, 0.245);
   background: rgba(56, 56, 56, 0.2);
 }
+.bg-custom-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.00) 0%,
+    rgba(0, 0, 0, 0.50) 18.53%,
+    rgba(0, 0, 0, 0.80) 27.8%,
+    rgba(0, 0, 0, 0.50) 49.89%,
+    rgba(0, 0, 0, 0.30) 76.68%,
+    rgba(0, 0, 0, 0.00) 100%
+  );
+}
 
 @layer base {
   * {

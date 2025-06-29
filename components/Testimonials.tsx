@@ -4,7 +4,7 @@ import Connect from "./Connect";
 
 export default function Testimonials() {
   return (
-    <div className="py-20 relative">
+    <div className="py-20 relative hidden lg:block">
       <div>
         <div className="bg-custom-overlay"></div>
         <img src="./Group41.svg" alt="" className="w-[100vw] " />
@@ -20,11 +20,11 @@ export default function Testimonials() {
           </p>
         </div>
         <section className="py-16 px-10">
-          <div className="flex gap-6 justify-center">
+          <div className="flex md:flex-row flex-col gap-6 justify-center">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-zinc-800 rounded-xl px-6 py-8 max-w-[15vw] flex flex-col glass-morphism shadow-lg"
+                className="bg-zinc-800 rounded-xl px-6 py-8 md:max-w-[15vw] flex flex-col glass-morphism shadow-lg"
               >
                 <img
                   src={t.avatar || "/placeholder.jpeg"}

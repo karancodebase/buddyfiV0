@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "./ui/carousel";
 
 const Problem = () => {
   return (
@@ -24,11 +25,8 @@ const Problem = () => {
         </div>
       </div>
 
-      <div className="flex justify-center px-10 gap-6 py-10">
-        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
-        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
-        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
-        <div className="w-[12vw] h-[30vh] border-2 rounded"></div>
+      <div className="flex justify-center gap-6 py-10">
+        <Carousel/>
       </div>
       <div className="flex justify-center">
         <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-8 md:px-10 px-2 mt-10">

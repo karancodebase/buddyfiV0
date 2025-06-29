@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Connect = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 hidden lg:block">
       <div className=" flex justify-center">
         <div className="glass-morphism rounded-lg w-[50vw] py-10 text-center">
           <div className="flex justify-center">

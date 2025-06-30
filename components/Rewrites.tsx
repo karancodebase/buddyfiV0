@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "./ui/carousel";
+import Carousel from "./ui/solutionCarousel";
 
 const Rewrites = () => {
   return (

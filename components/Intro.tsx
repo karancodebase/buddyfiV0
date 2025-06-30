@@ -42,7 +42,7 @@ const Intro = () => {
         <div className="md:w-[50vw]">
           <HeroCTA />
         </div>
-        <div className="mt-14 grid md:grid-cols-4 grid-cols-2 gap-4 px-4">
+        <div className="mt-14 grid md:grid-cols-4 grid-cols-2 gap-4 px-4 hidden">
           <div className="md:max-w-[8vw] glass-morphism text-center px-2 py-2 text-sm text-neutral-300">
             <span className="text-2xl text-blue-400 font-bold px-2">
               1,000+

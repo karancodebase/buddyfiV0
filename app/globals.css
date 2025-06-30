@@ -137,3 +137,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes expandRing {
+    0% {
+      transform: scale(0.95);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+  }
+
+  .animate-ring {
+    animation: expandRing 3s ease-in-out infinite;
+  }
+
+  .animation-delay-1 {
+    animation-delay: 0.3s;
+  }
+  .animation-delay-2 {
+    animation-delay: 0.6s;
+  }
+  .animation-delay-3 {
+    animation-delay: 0.9s;
+  }
+}

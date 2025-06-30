@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Connect = () => {
   return (
@@ -32,7 +33,9 @@ const Connect = () => {
             <div className="glass-morphism py-2 px-4 text-xs">Increase your hackathon win rate</div>
           </div>
           <div>
+            <Link href="https://app.buddyfi.xyz">
             <Button className="py-6 px-8 text-xl text-blue-50 cursor-pointer bg-gradient-to-r from-blue-600 to-cyan-600">Connect Wallet & Find Your Team</Button>
+            </Link>
           </div>
           <div className="flex gap-6 px-10 justify-center py-4">
             <div>🔐 Blockchain Secured</div>

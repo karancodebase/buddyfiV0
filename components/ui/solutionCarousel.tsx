@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { useRef, useState, useEffect } from "react"
@@ -10,45 +9,45 @@ interface CarouselItem {
   id: number
   title: string
   description: string
-  image: string
+  options?: string[]
 }
 
 const sampleData: CarouselItem[] = [
   {
     id: 1,
-    title: "Mountain Adventure",
-    description: "Explore breathtaking mountain landscapes and hiking trails.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Unbreakable On-Chain Reputation",
+    description: "Your reputation is stored on the blockchain - permanent, transparent, and impossible to fake. Every successful collaboration, code contribution, and peer review builds your immutable developer identity.",
+    options: ["Blockchain-verified skills", "Tamper-proof history", "Cross-platform reputation"]
   },
   {
     id: 2,
-    title: "Ocean Breeze",
-    description: "Relax by the seaside with stunning ocean views.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Lightning-Fast Matching",
+    description: "Find compatible teammates in under 60 seconds. Our optimized matching algorithm can process thousands of developer profiles to find your perfect match instantly.",
+    options: ["Sub minutes matching", "Global developer pool", "Instant notifications"]
   },
   {
     id: 3,
-    title: "City Lights",
-    description: "Experience the vibrant energy of urban nightlife.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Real-Time Team Analytics",
+    description: "Live dashboards track code contributions, task completion, and team velocity. Identify bottlenecks, celebrate wins, and optimize your workflow in real-time.",
+    options: ["Live progress tracking", "Performance insights", "Productivity optimization"]
   },
   {
     id: 4,
-    title: "Forest Retreat",
-    description: "Find peace in the tranquil depths of ancient forests.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Team Formation Tools",
+    description: "Create public or private teams, set skill requirements, and invite specific developers. Perfect for organized hackathons, startup formation, or long-term projects.",
+    options: ["Flexible team creation", "Skill-based filtering", "Invitation system"]
   },
   {
     id: 5,
-    title: "Desert Sunset",
-    description: "Witness spectacular sunsets over endless sand dunes.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Integrated Communication Suite",
+    description: "Built-in chat, video calls, and project discussions. No more jumping between Slack, Discord, and Zoom. Everything you need to collaborate effectively in one place.",
+    options: ["Unified communication", "Project-focused chat", "Video integration"]
   },
   {
     id: 6,
-    title: "Alpine Lakes",
-    description: "Discover crystal-clear lakes nestled in mountain valleys.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Gamified Achievement System",
+    description: "Earn badges, unlock new opportunities, and climb the reputation leaderboard. Higher reputation opens doors to exclusive hackathons and startup opportunities.",
+    options: ["Skill-based badges", "Exclusive opportunities", "Reputation rewards"]
   },
 ]
 
@@ -110,17 +109,22 @@ export default function Carousel() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {sampleData.map((item) => (
-            <Card key={item.id} className="flex-shrink-0 w-72 sm:w-80">
+            <Card key={item.id} className="flex-shrink-0 w-72 sm:w-80 glass-morphism">
               <CardContent className="p-0">
                 <div className="relative">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
+                 
                   <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <h3 className="font-semibold text-2xl mb-4 text-center">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                    <div className="mt-6">
+                      <ul>
+                        {item.options && item.options.map((option, idx) => (
+                          <li key={idx} className="text-sm text-muted-foreground pl-2 list-disc list-inside">
+                            {option}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </CardContent>

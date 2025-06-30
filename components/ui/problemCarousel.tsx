@@ -16,39 +16,39 @@ interface CarouselItem {
 const sampleData: CarouselItem[] = [
   {
     id: 1,
-    title: "Mountain Adventure",
-    description: "Explore breathtaking mountain landscapes and hiking trails.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Last-minute scrambling",
+    description: "Frantically DMing strangers on Discord the night before submissions open.",
+    image: "/problemimage1.svg?height=200&width=300",
   },
   {
     id: 2,
-    title: "Ocean Breeze",
-    description: "Relax by the seaside with stunning ocean views.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Skill mismatches",
+    description: "I thought you knew Solidity? | I thought YOU knew Solidity!",
+    image: "/problemimage2.png?height=200&width=300",
   },
   {
     id: 3,
-    title: "City Lights",
-    description: "Experience the vibrant energy of urban nightlife.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Trust issues",
+    description: "Can you really trust someone who claims to be a '10x dev' with a Metamask PFP?",
+    image: "/problemimage3.png?height=200&width=300",
   },
   {
     id: 4,
-    title: "Forest Retreat",
-    description: "Find peace in the tranquil depths of ancient forests.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Weekend warriors",
+    description: "I'm free for 2 hours Sunday night - unless my cat gets sick.",
+    image: "/problemimage4.png?height=200&width=300",
   },
   {
     id: 5,
-    title: "Desert Sunset",
-    description: "Witness spectacular sunsets over endless sand dunes.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Hero syndrome",
+    description: "One teammate tries to solo the project while everyone else turns into spectators.",
+    image: "/problemimage5.png?height=200&width=300",
   },
   {
     id: 6,
-    title: "Alpine Lakes",
-    description: "Discover crystal-clear lakes nestled in mountain valleys.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Timezone black hole",
+    description: "When your standup turns into a ghost town because it's 4AM for half the team.",
+    image: "/problemimage6.png?height=200&width=300",
   },
 ]
 
@@ -110,18 +110,18 @@ export default function Carousel() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {sampleData.map((item) => (
-            <Card key={item.id} className="flex-shrink-0 w-72 sm:w-80">
+            <Card key={item.id} className="flex-shrink-0 w-72 sm:w-80 bg-gray-300/20">
               <CardContent className="p-0">
                 <div className="relative">
+                  <div className="p-4 text-center">
+                    <h3 className="font-semibold text-2xl mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
                   <img
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </div>
                 </div>
               </CardContent>
             </Card>

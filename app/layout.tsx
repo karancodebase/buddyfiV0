@@ -15,12 +15,51 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// app/layout.tsx or app/page.tsx
+
 export const metadata: Metadata = {
   title: "BuddyFi",
+  description: "BuddyFi helps developers find ideal hackathon teammates using on-chain profiles and smart matching. Built on Solana.",
+  metadataBase: new URL("https://buddyfi.xyz"),
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "BuddyFi",
+    description: "Smart team matching for developers. Powered by Solana.",
+    url: "https://buddyfi.xyz",
+    siteName: "BuddyFi",
+    images: [
+      {
+        url: "/og-image.png", // Make sure this image exists in /public
+        width: 1200,
+        height: 630,
+        alt: "BuddyFi",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BuddyFi",
+    description: "Smart matching for developers to team up for hackathons.",
+    images: ["/og-image.png"],
+    creator: "@buddyfii", // optional
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
+
 
 export default function RootLayout({
   children,

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buddyfi.xyz
+
+# Sitemaps
+Sitemap: https://buddyfi.xyz/sitemap.xml

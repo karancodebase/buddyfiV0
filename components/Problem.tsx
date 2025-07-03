@@ -21,7 +21,7 @@ const Problem = () => {
             couldn&apos;t find each other. The random team formation process was
             killing innovation before it even started.&quot;
           </p>
-          <p className="text-cyan-400 md:text-xl mt-4">- BuddyFi Founders</p>
+          <p className="text-cyan-400 md:text-xl mt-4">- BuddyFi Team</p>
         </div>
       </div>
 

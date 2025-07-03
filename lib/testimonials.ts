@@ -29,6 +29,12 @@ const testimonials = [
     quote: "No more last-minute scrambles. BuddyFi makes team formation effortless.",
     avatar: "/placeholder5.jpeg",
   },
+   {
+    name: "Sophia Lee",
+    role: "Frontend Engineer",
+    quote: "BuddyFi helped me find the perfect coding partner in minutes. Our productivity skyrocketed! BuddyFi helped me find the perfect coding partner in minutes. Our productivity skyrocketed!",
+    avatar: "/placeholder1.jpeg",
+  },
 ];
 
 export default testimonials; 

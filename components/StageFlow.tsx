@@ -82,7 +82,7 @@ export default function StageFlow() {
         </div>
 
         {/* SVG loop arrow (from top right to bottom right) */}
-        <svg className="absolute hidden md:block top-36 right-[15vw] w-28 h-56" viewBox="0 0 100 200" fill="none">
+        {/* <svg className="absolute hidden md:block 2xl:hidden top-36 right-[15vw] w-28 h-56" viewBox="0 0 100 200" fill="none">
           <path
             d="M 0 0 Q 100 0 100 100 Q 100 200 0 200"
             stroke="#ccc"
@@ -102,7 +102,7 @@ export default function StageFlow() {
               <polygon points="0 0, 10 3.5, 0 7" fill="#ccc" />
             </marker>
           </defs>
-        </svg>
+        </svg> */}
       </div>
     </section>
   );

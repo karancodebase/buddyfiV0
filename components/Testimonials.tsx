@@ -43,7 +43,7 @@ export default function Testimonials() {
           </div>
         </section>
 
-        <div className="pt-20 mx-auto flex justify-center  md:text-2xl font-semibold">
+        <div className="pt-20 mx-auto hidden lg:flex justify-center  md:text-2xl font-semibold">
           <div>
             “Real stories from developers who found their perfect teammates and
             built amazing things together.”

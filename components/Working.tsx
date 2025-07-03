@@ -14,17 +14,17 @@ const Working = () => {
           matches and seamless collaboration.
         </p>
       </div>
-      <div className="py-10 flex justify-center md:px-50 px-5">
+      <div className="py-10 flex justify-center lg:px-50 px-5">
       <div className="space-y-16">
               {/* Step 1 */}
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 lg:gap-12 gap-6 items-center">
                 <div className="order-2 md:order-1">
-                  <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl">
+                  <div className="bg-white/5 backdrop-blur-md border border-white/10 md:p-8 p-4 rounded-2xl">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                        <span className="text-xl font-bold">1</span>
+                      <div className="lg:w-12 w-8 lg:h-12 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span className="lg:text-xl font-bold">1</span>
                       </div>
-                      <h3 className="text-2xl font-bold">Create Your On-Chain Profile</h3>
+                      <h3 className="lg:text-2xl text-xl font-bold">Create Your On-Chain Profile</h3>
                     </div>
                     <p className="text-gray-300 leading-relaxed mb-6">
                       Connect your wallet and let BuddyFi analyze your on-chain activity, GitHub contributions, and
@@ -152,7 +152,7 @@ const Working = () => {
       </div>
 
       <div className="flex justify-center">
-        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-6 md:px-10 px-6 mt-10">
+        <div className="glass-morphism lg:max-w-[50vw] mx-2 text-center py-6 md:px-10 px-6 mt-10">
           <p className="text-neutral-50 md:text-2xl text-xl mb-4 font-semibold">
             Real Results from Real Teams
           </p>

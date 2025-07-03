@@ -4,17 +4,17 @@ const stages = [
   {
     title: "User Onboarding",
     desc: "User connects their Solana wallet and lands on the app. We ask minimal but key questions to understand skills, interests, and hackathon intent.",
-    label: "preparation",
+    label: "Preparation",
   },
   {
     title: "Profile Creation",
     desc: "User fills out a form with skills, goals, and availability. This data is pinned to IPFS and referenced on-chain, ensuring decentralized identity.",
-    label: "preparation",
+    label: "Preparation",
   },
   {
     title: "Sketching the Match",
     desc: "We map out potential matches using compatibility logic based on interests, tech stack, and activity level.",
-    label: "structure & feedback loop",
+    label: "Structure & feedback loop",
   },
   {
     title: "Initial Matching",
@@ -51,14 +51,39 @@ export default function StageFlow() {
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-6 mb-32">
           {stages.slice(0, 4).map((stage, i) => (
             <div key={i} className="relative">
-              <div className="w-6 h-6 bg-gray-300 rounded-full mb-6" />
+              {/* Number inside the dot */}
+              <div className="w-6 h-6 bg-gray-300 rounded-full mb-6 flex items-center justify-center text-xs font-semibold text-black">
+                {i + 1}
+              </div>
+
               {stage.label && (
-                <p className="absolute top-[-10] left-20 text-gray-300">{stage.label}</p>
+                <p className="absolute -top-3 left-12 text-gray-400 text-sm">
+                  {stage.label}
+                </p>
               )}
+
               <h3 className="text-lg font-semibold mb-2">{stage.title}</h3>
               <p className="text-sm text-gray-400">{stage.desc}</p>
+
+              {/* Line and right arrow */}
               {i < 3 && (
-                <div className="absolute top-3 left-10 right-[0rem] h-0.5 bg-white" />
+                <>
+                  <div className="absolute top-3 left-10 right-4 h-0.5 bg-white" />
+                  <div className="absolute top-[3.5px] right-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </>
               )}
             </div>
           ))}
@@ -66,19 +91,46 @@ export default function StageFlow() {
 
         {/* Bottom Row */}
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-6">
-          {stages.slice(4).reverse().map((stage, i) => (
-            <div key={i} className="relative">
-              <div className="w-6 h-6 bg-gray-300 rounded-full mb-6" />
-              {stage.label && (
-                <p className="absolute top-[-10] left-14 text-sm text-gray-300">{stage.label}</p>
+          {stages
+            .slice(4)
+            .map((stage, i) => (
+              <div key={i} className="relative">
+                {/* Number inside the dot */}
+                <div className="w-6 h-6 bg-gray-300 rounded-full mb-6 flex items-center justify-center text-xs font-semibold text-black">
+                  {i + 5}
+                </div>
+
+                {stage.label && (
+                  <p className="absolute -top-3 left-12 text-sm text-gray-400">
+                    {stage.label}
+                  </p>
+                )}
+
+                <h3 className="text-lg font-semibold mb-2">{stage.title}</h3>
+                <p className="text-sm text-gray-400">{stage.desc}</p>
+
+                {/* Line and left arrow */}
+                  {i < 3 && (
+                <>
+                  <div className="absolute top-3 left-10 right-4 h-0.5 bg-white" />
+                  <div className="absolute top-[3.5px] right-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </>
               )}
-              <h3 className="text-lg font-semibold mb-2">{stage.title}</h3>
-              <p className="text-sm text-gray-400">{stage.desc}</p>
-              {i < 3 && (
-                <div className="absolute top-3 right-1 left-[2.5rem] h-0.5 bg-white" />
-              )}
-            </div>
-          ))}
+              </div>
+            ))}
         </div>
 
         {/* SVG loop arrow (from top right to bottom right) */}

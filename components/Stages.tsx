@@ -18,7 +18,7 @@ const Stages = () => {
       </div>
 
       <div className="flex justify-center">
-        <div className="glass-morphism md:max-w-[50vw] mx-2 text-center py-10 md:px-6 px-2 mt-10">
+        <div className="glass-morphism lg:max-w-[50vw] mx-2 text-center py-10 md:px-6 px-2 mt-10">
           <p className="text-neutral-50 md:text-2xl text-xl mb-6 font-semibold">
             Built by Developers, for Developers
           </p>

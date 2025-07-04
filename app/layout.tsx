@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "BuddyFi",
-  description: "BuddyFi helps developers find ideal hackathon teammates using on-chain profiles and smart matching. Built on Solana.",
+  description:
+    "BuddyFi helps developers find ideal hackathon teammates using on-chain profiles and smart matching. Built on Solana.",
   metadataBase: new URL("https://buddyfi.xyz"),
   icons: {
     icon: "/favicon.ico",
@@ -27,8 +29,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BuddyFi",
     description: "Smart team matching for developers. Powered by Solana.",
-    url: "https://buddyfi.xyz",
+    url: "https://www.buddyfi.xyz",
     siteName: "BuddyFi",
+    type: "website",
     images: [
       {
         url: "/og-image.png", // Make sure this image exists in /public
@@ -38,7 +41,6 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -60,7 +62,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,13 +69,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MLMRDKBE9Z"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MLMRDKBE9Z');
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
-        <Analytics/>
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );

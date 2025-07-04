@@ -82,6 +82,18 @@ export default function RootLayout({
             gtag('config', 'G-MLMRDKBE9Z');
           `}
         </Script>
+        <Script id="structured-data" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "BuddyFi",
+            url: "https://www.buddyfi.xyz",
+            sameAs: [
+              "https://x.com/buddyfii",
+              "https://www.linkedin.com/company/buddyfii",
+            ],
+          })}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 // app/layout.tsx or app/page.tsx
 
 export const metadata: Metadata = {
-  title: "BuddyFi",
+  title: "BuddyFi - Find your perfect dev teammate for hackathons",
   description:
     "BuddyFi helps developers find ideal hackathon teammates using on-chain profiles and smart matching. Built on Solana.",
   metadataBase: new URL("https://buddyfi.xyz"),
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BuddyFi",
     description: "Smart team matching for developers. Powered by Solana.",
-    url: "https://www.buddyfi.xyz",
+    url: "https://buddyfi.xyz",
     siteName: "BuddyFi",
     type: "website",
     images: [
@@ -87,7 +87,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "BuddyFi",
-            url: "https://www.buddyfi.xyz",
+            url: "https://buddyfi.xyz",
             sameAs: [
               "https://x.com/buddyfii",
               "https://www.linkedin.com/company/buddyfii",

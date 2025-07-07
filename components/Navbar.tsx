@@ -20,7 +20,7 @@ export default function Navbar() {
 
       <nav className="flex items-center gap-6 text-sm">
         
-        <Link href="https://github.com/karancodebase/buddyfi">
+        <Link href="https://github.com/BuddyFi/BuddyFi">
           <Github className="text-neutral-400" />
         </Link>
         <Link

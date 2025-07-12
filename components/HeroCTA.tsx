@@ -96,7 +96,7 @@ export default function HeroCTA() {
       {/* CTA Button */}
       <Link href="https://app.buddyfi.xyz">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <button className="relative cursor-pointer z-10 px-6 py-3 bg-black text-white text-lg font-medium rounded-full flex items-center gap-2 hover:scale-105 transition glow">
+          <button className="relative cursor-pointer z-10 py-1 px-3 text-white text-lg font-medium rounded-full bg-transparent flex items-center gap-2 hover:scale-105 transition glow">
             ✨ Start Building – It’s Free
           </button>
         </div>
